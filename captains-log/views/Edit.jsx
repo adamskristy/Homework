@@ -8,23 +8,37 @@ class Edit extends React.Component {
 
         return (
             <DefaultLayout title="Edit Log">
-                <h1>Edit Page</h1>
-                    <form action={`/logs/${log._id}?_method=PUT`} method="POST">
 
-                        <label htmlFor="title">Entry:</label>
-                        <input type="text" id="title" title="title" defaultValue={log.title} />
+                
+                    <h1>Edit Log</h1>
+                    
+                        <form action={`/logs/${log._id}?_method=PUT`} method="POST">
 
-                        <label htmlFor="etry">Entry:</label>
-                        <input type="text" id="entry" title="entry" defaultValue={log.entry} />
+                            <fieldset>
+                                <p> 
+                                    <label htmlFor="title">Title:</label>
+                                    <input type="text" id="title" title="title" defaultValue={log.title} />
+                                </p>
 
-                        <label htmlFor='shipIsBroken'>Is Ship Broken:</label>
-                        <input type="checkbox" id="shipIsBroken" name="shipIsBroken" defaultChecked={log.shipIsBroken} />
+                                <p>
+                                    <label htmlFor="etry">Entry:</label>
+                                    <textarea rows="10" cols="50" id="entry" title="entry" defaultValue={log.entry}></textarea>
+                                    
+                                </p>
 
-                        <input type="submit" value="Edit log"/>
-                    </form>
-                <nav>
-                    <a href ='/logs'>Back</a>
-                </nav>
+                                <p>
+                                    <label htmlFor='shipIsBroken'>Is Ship Broken:</label>
+                                    <input type="checkbox" id="shipIsBroken" name="shipIsBroken" defaultChecked={log.shipIsBroken} />
+                                </p>
+
+
+                                <input type="submit" value="Edit log"/>
+                            </fieldset>
+                        </form>
+                    <nav>
+                        <a href ='/logs'>Back</a>
+                    </nav>
+            
             </DefaultLayout>
         )
     }

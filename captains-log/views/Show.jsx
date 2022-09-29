@@ -11,7 +11,7 @@ class Show extends React.Component {
         return (
 
             <DefaultLayout title ="Log Details">
-                <div>
+                
                     <h1>{`${log.title} Log`}</h1>
                         <p>{log.entry}</p>
                         <h4><p>{log.shipIsBroken ? "Ship status: shipwrecked " : "Ship status: all clear  " }</p></h4>
@@ -29,7 +29,7 @@ class Show extends React.Component {
                     <nav>
                         <a href ='/logs'>Back</a>
                     </nav>
-                </div>
+                
             </DefaultLayout>
         );
     }

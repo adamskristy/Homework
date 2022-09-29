@@ -9,8 +9,10 @@ class DefaultLayout extends React.Component {
                     <link rel="stylesheet" href="/css/styles.css" />
                 </head>
                 <body>
+                    <div className='container'>
                     
                     {this.props.children}
+                    </div>
                 </body>
             </html>
         )
