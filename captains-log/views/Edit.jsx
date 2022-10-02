@@ -17,12 +17,12 @@ class Edit extends React.Component {
                             <fieldset>
                                 <p> 
                                     <label htmlFor="title">Title:</label>
-                                    <input type="text" id="title" name="title" defaultValue={log.title} />
+                                    <input type="text" id="title" title="title" defaultValue={log.title} />
                                 </p>
 
                                 <p>
-                                    <label htmlFor="entry">Entry:</label>
-                                    <textarea rows="10" cols="50" id="entry" name="entry" defaultValue={log.entry}></textarea>
+                                    <label htmlFor="etry">Entry:</label>
+                                    <textarea rows="10" cols="50" id="entry" title="entry" defaultValue={log.entry}></textarea>
                                     
                                 </p>
 

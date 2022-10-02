@@ -10,10 +10,8 @@ class DefaultLayout extends React.Component {
                 </head>
                 <body>
                     <div className='container'>
-                       
                     
                     {this.props.children}
-                        
                     </div>
                 </body>
             </html>

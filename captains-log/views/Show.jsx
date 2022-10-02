@@ -28,10 +28,10 @@ class Show extends React.Component {
                             <input type="submit" value="Delete Log" />
                         </form>
 
-                        <nav>
-                            <a href ='/logs'>Back</a>
-                        </nav>
-                    </div>
+                    <nav>
+                        <a href ='/logs'>Back</a>
+                    </nav>
+               </div> 
             </DefaultLayout>
         );
     }
