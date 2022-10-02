@@ -22,5 +22,18 @@ RESTful Routes
 4   Update
 5   Create 	/logs/ 	    POST 	    none 	            Log.create(req.body)
 6   Edit 
-7 	Show 				
+7 	Show 	
+
+///////////////////////////////////
+Common errors
+
+-undefined unable to read map
+    check that variables match singular/plural  
+    logs?.map will return an empty array if the array is empty
+    if you have nothing in ur database and u  try to run map youll get an error 
+
+-edit not updating changes
+                                name was title
+    <input type="text" id="title" name="title" defaultValue={log.title} />
+
 		

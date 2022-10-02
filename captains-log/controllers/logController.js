@@ -2,6 +2,8 @@ const Log = require('../models/log')
 const seed = require('../models/seed')
 
 
+
+
 // ROUTE     GET /logs    (index)
 const findAllLogs = (req, res) => {  
    
@@ -34,7 +36,7 @@ const deleteOneLog = (req, res) => {
 
 // ROUTE     PUT /logs/:id       (update)
 const updateOneLog = (req, res) => {
-
+    console.log(req.body)
     if (req.body.shipIsBroken === "on" || req.body.shipIsBroken === true ) {
         req.body.shipIsBroken = true
     } else {
@@ -42,6 +44,7 @@ const updateOneLog = (req, res) => {
     }
 
     Log.findByIdAndUpdate(req.params.id, req.body, (err, foundLog) => {
+        console.log(req.body)
         if (err) {
             res.status(400).json(err)
         } else {
@@ -59,16 +62,19 @@ const createNewLog = (req, res) => {
     }
    
     Log.create(req.body, (err, createdLog) => {
+        console.log(req.body)
         if (err) {
             res.status(400).json(err)
         } else {
             res.status(200).redirect('/logs')
+            // res.status(200).redirect(`/logs/${req.params.id}`)
         }
     })
 }
 
 // ROUTE      GET /logs/:id/edit     (edit)
 const showEditView = (req, res) => {
+    
     Log.findById(req.params.id, (err, foundLog) => {
         if (err) {
             res.status(400).json(err)
@@ -101,6 +107,17 @@ const seedStarterData = (req, res) => {
     })
 }
 
+// ROUTE       GET /logs/clear     (clear)
+const clearLogData = (req, res) => {
+    Log.deleteMany({}, (err, deletedLogs) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).redirect('/logs/')
+        }
+    })
+}
+
 // ROUTE     GET /logs/:id     (show)
 const showOneLog = (req, res) => {
 
@@ -122,5 +139,6 @@ module.exports = {
     createNewLog,
     showEditView,
     seedStarterData,
+    clearLogData,
     showOneLog,
 }

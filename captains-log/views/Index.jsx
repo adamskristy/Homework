@@ -8,7 +8,7 @@ class Index extends React.Component {
 
         return (
             <DefaultLayout title="All Logs">
-                <div>
+            
                     <h1>Captain's Logs</h1>
                     <ul id ="logs-index">
                         {log.map((log)=> {
@@ -23,7 +23,7 @@ class Index extends React.Component {
                     <nav>
                         <a href="/logs/new">Create New Log</a>
                     </nav>
-                </div>
+      
             </DefaultLayout>
         )
     }

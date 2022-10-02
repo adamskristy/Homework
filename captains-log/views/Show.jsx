@@ -11,25 +11,27 @@ class Show extends React.Component {
         return (
 
             <DefaultLayout title ="Log Details">
-                <div>
+                
                     <h1>{`${log.title} Log`}</h1>
                         <p>{log.entry}</p>
-                        <h4><p>{log.shipIsBroken ? "Ship status: shipwrecked " : "Ship status: all clear  " }</p></h4>
+                        <p>{log.time}</p>
+                        <h4><p>{log.shipIsBroken ? "Ship status: need repairs " : "Ship status: all clear  " }</p></h4>
 
-                    <button>
-                        <a href={`/logs/${log._id}/edit`}>Edit</a>
-                    </button>
+                    <div id="show-btns">
+                        
+                        <form action ={`/logs/${log._id}/edit`} >
+                            <input type="submit" value="Edit" />
+                        </form>
+                            
+                
+                        <form action ={`/logs/${log._id}?_method=DELETE`} method="POST">
+                            <input type="submit" value="Delete Log" />
+                        </form>
 
-
-                    <form action ={`/logs/${log._id}?_method=DELETE`} method="POST">
-
-                        <input type="submit" value="Delete Log" />
-                    </form>
-
-                    <nav>
-                        <a href ='/logs'>Back</a>
-                    </nav>
-                </div>
+                        <nav>
+                            <a href ='/logs'>Back</a>
+                        </nav>
+                    </div>
             </DefaultLayout>
         );
     }

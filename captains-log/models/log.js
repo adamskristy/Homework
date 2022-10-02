@@ -1,6 +1,7 @@
 // load mongoose
 const mongoose = require('mongoose')
 
+
 // add a shortcut to Schema
 const Schema = mongoose.Schema
 
@@ -8,7 +9,7 @@ const Schema = mongoose.Schema
 const logSchema = new Schema({
     title: { type: String, required: true }, 
     entry: { type: String, required: true }, 
-    shipIsBroken: Boolean
+    shipIsBroken: Boolean,
 })
 
 // create a Model from our Schema

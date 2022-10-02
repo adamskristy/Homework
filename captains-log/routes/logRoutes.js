@@ -19,6 +19,7 @@ const {
     createNewLog,
     showEditView,
     seedStarterData,
+    clearLogData,
     showOneLog,
 } = require('../controllers/logController')
 
@@ -44,11 +45,14 @@ router.post('/', createNewLog)
 // Setup "edit" route
 router.get('/:id/edit', showEditView)
 
-// Setup "show" route  
-router.get('/:id', showOneLog)
-
 // Setup "seed" route
 router.get('/seed', seedStarterData)
+
+// CLEAR
+router.get('/clear', clearLogData)
+
+// Setup "show" route  
+router.get('/:id', showOneLog)
 
 
 module.exports = router

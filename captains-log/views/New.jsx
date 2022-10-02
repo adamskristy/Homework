@@ -5,27 +5,31 @@ class New extends React.Component {
     render() {
         return (
             <DefaultLayout title="Create a New Log">
-                <div>
+                <h1>New Log</h1>
                     <form action="/logs" method="POST">
+                        <fieldset>
 
-                        <label htmlFor='title'>Title:</label>
-                        <input type="text" id="title" name="title" />
+                            <p>
+                                <label htmlFor='title'>Title:</label>
+                                <input type="text" id="title" name="title" />
+                            </p>
 
-                        
-                        <label htmlFor='entry'>Entry:</label>
-                        <input type="text" id="entry" name="entry" />
+                            <p>
+                                <label htmlFor='entry'>Entry:</label>
+                                <textarea rows="10" cols="50" id="entry" name="entry"></textarea>
+                            </p>
+                            
+                            <p>
+                                <label htmlFor='shipIsBroken'>Is Ship Broken:</label>
+                                <input type="checkbox" id="shipIsBroken" name="shipIsBroken" />
+                            </p>
 
-                        
-                        <label htmlFor='shipIsBroken'>Is Ship Broken:</label>
-                        <input type="checkbox" id="shipIsBroken" name="shipIsBroken" />
-
-                        <input type="submit" value="Submit Log"/>
-
+                            <input type="submit" value="Submit Log"/>
+                        </fieldset>
                     </form>
                     <nav>
                         <a href ='/logs'>Back</a>
                     </nav>
-                </div>
             </DefaultLayout>
         )
     }

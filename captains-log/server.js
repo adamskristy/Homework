@@ -1,5 +1,6 @@
 // Load express
 const express = require('express')
+const{application} = require ('express')
 const methodOverride = require('method-override')
 
 // Bring in mongoConfig function
@@ -24,6 +25,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.urlencoded({extended:false}))
 app.use(express.static("public"))
 app.use(methodOverride("_method"))
+app.use(express.json())
 
 app.use('/logs', logRoutes)
 
