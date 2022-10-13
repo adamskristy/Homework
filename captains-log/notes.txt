@@ -35,5 +35,9 @@ Common errors
 -edit not updating changes
                                 name was title
     <input type="text" id="title" name="title" defaultValue={log.title} />
+-TypeError: Cannot read properties of null (reading 'name')
 
 		
+-make sure using same variable in controller and Routes
+router.get('/:id', showOneProduct)
+erq.params.id

@@ -1,0 +1,64 @@
+:root{
+    --lightgrey-bkgd: rgb(212, 216, 219);
+}
+
+
+
+.App {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    font-family:monospace;
+    height: 100vh;
+    }
+    
+    .sidebar { 
+        grid-area: 1 / 1 / 6 / 2; 
+        background-color: var(--lightgrey-bkgd);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .review { 
+        grid-area: 1 / 2 / 3 / 3;
+        background-color: var(--lightgrey-bkgd);
+        padding-top: 0px;
+        padding-left: 15px;
+     }
+
+    .avg-rating { 
+        grid-area: 1 / 3 / 3 / 4;
+        background-color: var(--lightgrey-bkgd);
+        padding-top: 0px;
+        padding-left: 15px;
+     }
+
+    .sentiment { 
+        grid-area: 1 / 4 / 3 / 5;
+        background-color: var(--lightgrey-bkgd);
+        padding-top: 0px;
+        padding-left: 15px;
+     }
+
+    .web-visitor { 
+        grid-area: 3 / 2 / 6 / 5;
+        background-color: var(--lightgrey-bkgd);
+        padding-top: 0px;
+        padding-left: 15px;
+     }
+
+     ul {
+        list-style-type: none;
+        line-height: 300%;
+     }
+
+     .web-visit-inner{
+        background-color: lightslategray;
+        height: 70%;
+        width: 100px;
+     }
+    
+    
