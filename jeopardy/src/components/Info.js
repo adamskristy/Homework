@@ -17,7 +17,7 @@ const loaded = () => {
             </div>
         )
     }
-    const loading = () => {
+const loading = () => {
         return   <div>
                     <h2>Category: </h2>
                     <h3>Points:  </h3>

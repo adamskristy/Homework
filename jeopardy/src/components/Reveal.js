@@ -20,7 +20,7 @@ export default function Reveal ({ question }) {
     }
 
     //use loaded/loading make sure react has question data first before trying to render
-    
+    const loaded = () => {
         return ( 
             <div>
                 {/* use && to conditionally render based on state variable */}
@@ -34,4 +34,13 @@ export default function Reveal ({ question }) {
             </div>
         );
     } 
+
+    const loading = () => {
+     
+            <div>
+                
+            </div>
+    }
+    return question ? loaded() : loading()
+}
     
