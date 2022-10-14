@@ -1,6 +1,7 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Info from './Info';
 import Reveal from './Reveal';
+import Score from './Score';
 
 export default function Question (){
 
@@ -18,14 +19,9 @@ export default function Question (){
         //console.log(data)
     }
 
-
-    // useEffect(() => {
-    //     //this function will run when [] changes, since empty
-    //     getQuestion()
-    // },[])
-
     return(
         <div>
+            <Score question={question} />
             <h1>Let's Play</h1>
             {/* when button clicked, function will run */}
             <button onClick={getQuestion}>Get Question</button>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function Reveal ({ question }) {
 // question is a props passed down from question.js
@@ -9,29 +9,25 @@ export default function Reveal ({ question }) {
     //state to hold question data
     //pass false to start hidden
     const [reveal, setReveal] = useState(false)
+    const [buttonText, setButtonText] = useState ('Click to Reveal Answer')
     
     //function to reveal question
     const revealAnswer = () => {
         //toggle reveal state
         setReveal(reveal => !reveal)
+        //toggle button text
+        setButtonText((state) => (state === 'Click to Hide Answer' ? 'Click to Reveal Answer' : 'Click to Hide Answer'))
     }
-    
-    // useEffect(() => {
-    //     //will hide answer when question data changes
-    //     revealAnswer()
-    // },[question])
-
 
     //use loaded/loading make sure react has question data first before trying to render
     
         return ( 
             <div>
                 {/* use && to conditionally render based on state variable */}
-                <button onClick={revealAnswer}>Click to Reveal Answer</button>
+                <button onClick={revealAnswer}>{buttonText}</button>
                 {reveal && (
                     <div>
-                        <h3>Answer:</h3>
-                        <h3>{qstn.answer}</h3>
+                        <h3>Answer: {qstn.answer}</h3>
                     </div>
                 )}
                 
