@@ -1,22 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
+import Info from './Info';
+import Reveal from './Reveal';
 
-export default function Question (props){
+export default function Question (){
 
-    let { question } = props
 
-    console.log(question[0].value)
+    //state to hold question data
+    //initial value, function to change value = useState(what is being passed as initial value, ex. empty string)
+    let [question, setQuestion] = useState('')
 
-    const handleChange = (e) => {
-        set
+    //function to get questions
+    const getQuestion = async () => {
+        //make fetch request and store response
+        const response = await fetch(`http://jservice.io/api/random`)
+        const data = await response.json()
+        setQuestion(data)
+        console.log(data)
     }
+
+
+    // useEffect(() => {
+    //     //this function will run when [] changes, since empty
+    //     getQuestion()
+    // },[])
 
     return(
         <div>
             <h1>Let's Play</h1>
-            <button onClick={handleClick}>Get Question</button>
-            <h2>Category: {question[0].category.title}</h2>
-            <h3>Points: </h3>
-            <h3>Answer: </h3>
+            {/* when button clicked, function will run */}
+            <button onClick={getQuestion}>Get Question</button>
+            {/* pass question as props to Info, o able to use in Info */}
+            <Info question={question} />
+            <Reveal question={question} />
         </div>
     )
 }
