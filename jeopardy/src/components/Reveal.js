@@ -16,14 +16,14 @@ export default function Reveal ({ question }) {
         setReveal(reveal => !reveal)
     }
     
-    useEffect(() => {
-        //this function will run when [] changes, since empty
-        revealAnswer()
-    },[question])
+    // useEffect(() => {
+    //     //will hide answer when question data changes
+    //     revealAnswer()
+    // },[question])
 
 
     //use loaded/loading make sure react has question data first before trying to render
-    const loaded = () => {
+    
         return ( 
             <div>
                 {/* use && to conditionally render based on state variable */}
@@ -38,19 +38,4 @@ export default function Reveal ({ question }) {
             </div>
         );
     } 
-    const loading = () => {
-        return ( 
-            <div>
-                <button onClick={revealAnswer}>Click to Reveal Answer</button>
-                {reveal && (
-                    <div>
-                
-                    </div>
-                )}
-                
-            </div>
-        );
-    }
-
-    return question ? loaded() : loading()
-}
+    

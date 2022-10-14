@@ -15,7 +15,7 @@ export default function Question (){
         const response = await fetch(`http://jservice.io/api/random`)
         const data = await response.json()
         setQuestion(data)
-        console.log(data)
+        //console.log(data)
     }
 
 
