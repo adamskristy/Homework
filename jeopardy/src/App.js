@@ -6,8 +6,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Welcome to Jeopardy!</h1>
-      <Question />
+      <h1 className='heading'>Welcome to Jeopardy!</h1>
+        <div className='inner'>
+          <Question />
+        </div>
     </div>
   );
 }

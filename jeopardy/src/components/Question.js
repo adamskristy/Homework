@@ -20,12 +20,12 @@ export default function Question (){
     }
 
     return(
-        <div>
+        <div className='question'>
             <Score question={question} />
-            <h1>Let's Play</h1>
+            <h1 className='heading'>Let's Play</h1>
             {/* when button clicked, function will run */}
             <button onClick={getQuestion}>Get Question</button>
-            {/* pass question as props to Info, o able to use in Info */}
+            {/* pass question as props to Info, so able to use in Info */}
             <Info question={question} />
             <Reveal question={question} />
         </div>

@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+# Jeopardy API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Make a Jeopardy Trivia App using jService!
+
+[jService](http://jservice.io) is an API that has Jeopardy trivia questions and answered available to the public.
+
+The purpose of this project was to get experience with react and making a `GET` request (using fetch) from an API to get data.
+
+---------------------------------------------------------
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 ## Available Scripts
 

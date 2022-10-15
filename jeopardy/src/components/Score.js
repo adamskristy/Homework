@@ -30,10 +30,10 @@ const resetScore = (e) => {
 
     return(
         <div>
-            <h1>Score: {score}</h1>
+            <h1 className='score'>Score: {score}</h1>
             <form>
-                <button onClick={decreaseScore}>Decrease</button>
-                <button onClick={increaseScore}>Increase</button>
+                <button className='decrease' onClick={decreaseScore}>Decrease</button>
+                <button className='increase' onClick={increaseScore}>Increase</button>
                 <button onClick={resetScore}>Reset</button>
             </form>
         </div>
