@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react';
 import StarShip from '../components/StarShip';
 
-
 function Swapi() {
     
     let [starShip, setStarship] = useState([])

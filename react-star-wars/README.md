@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# W2 D3: Starships
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Intro
+In the lesson earlier you:
 
-## Available Scripts
+1. Learned to consume a third-party API in React and invoke the call to that API using the useEffect hook.
+2. Organize State with the useState hook.
+In this lab, you'll consume the Star Wars API and render it's data.
 
-In the project directory, you can run:
 
-### `npm start`
+### Set Up
+To get set up for this lesson:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Use create-react-app to create a React app named react-star-wars
+- cd into react-star-wars and open VS Code.
+- Open a terminal in VS Code.
+- Start the React Dev Server.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Exercises
+Styling in this lab is secondary to completing the functionality
 
-### `npm run build`
+1. Research documentation of [SWAPI](https://swapi.dev/documentation) to find the endpoint for the starships resource.
+2. Create a services/sw-api.js service module and ensure that all API/fetch calls are made from this module.
+3. Use named exports to expose AJAX functionality as needed, e.g., export function getAllStarships() {...}to obtain all starships.
+4. Obtain all of the starships from the API and render in App a card for each starship.
+5. Cards should contain the text of the starship's name.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Hints
+- Hold the starship objects in state with the useState hook, don't forget to initialize to an empty array!
+- Use the useEffect hook to make the AJAX request once the app loads.
+- Once the starship data comes from the API, be sure to update state with the setter function.
+- Create and import a StarShipCard component into App.js.
+.map() over each starship object in state to transform them into a StarshipCard  component
+- CORS issue? Try changing your /starships endpoint to /starships/ 👈 trust us on that one 😎.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Bonus
+- Display additional details for each Starship in it's respectable card.
+- This API has a pagination feature that allows you to get additional starships to display - find out how to use this to your advantage and allow users to get more starships at the click of a button

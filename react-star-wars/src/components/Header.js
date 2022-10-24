@@ -1,7 +1,7 @@
 function Header() {
     return ( 
-        <div>
-            <h1>Star Wars Starships</h1>
+        <div className="header">
+            <h1>STARWARS STARSHIPS</h1>
         </div>
      );
 }

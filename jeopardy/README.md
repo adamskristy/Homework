@@ -6,72 +6,41 @@ Make a Jeopardy Trivia App using jService!
 
 The purpose of this project was to get experience with react and making a `GET` request (using fetch) from an API to get data.
 
----------------------------------------------------------
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+1. Make a button labeled "Random Trivia Question" or "Get Question" or something descriptive.
 
-## Available Scripts
+2. On click, have this button that will make a `GET` request (using fetch) to get random trivia data. Let's start you off with a win by giving you the URL: `http://jservice.io/api/random`
 
-In the project directory, you can run:
+3. Make some html elements like a `div` where you will display the **question**, **category** and **points**. NOTE: You will need to look at the data that is returned to you and think back about how to access data from different datatypes (is it an array within an object? How do you access the info?).
 
-### `npm start`
+4. Make another `div` in your HTML where you display the **answer**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+5. Add an on click, that has a function that will toggle whether or not you can see the answer.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+6. Add other elements to your page to make it make sense and look good (see attached image)
 
-### `npm test`
+7. Make a div that has an h2 and two buttons
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+8. Inside the h2 keep score, start at 0
 
-### `npm run build`
+9. Make one button add the points to the score and the other to subtract points from the score (just add or subtract 1 point - using the points value from jService is Hungry for More)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+10. Add a little style and color to your app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Hungry for More?
+## jService+
+1. use the points provided for the question to add and subtract from the score [React docs: lifting state up](https://reactjs.org/docs/lifting-state-up.html).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. create a third button that resets the score to 0
 
-### `npm run eject`
+3. Make another button titled `Get 10 Questions`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Make a request to get random trivia data that returns 10 items: ex: `'http://jservice.io/api/random?count=10'`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Use what you learned today to display all 10 of the questions.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+6. Include a button with each of the questions to reveal that will reveal the answer when clicked. (You may find it easy to reveal ALL the answers, revealing just the answer of one question is challenging!)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+7. Use the documentation to look at the categories that are available with jService. Choose 1. Make a request to get the trivia information for that category. Display them on your page in the same way as before (a question with an answer button);
 
-## Learn More
+8. Research other APIs! Find one that looks interesting and make a "GET" request for some data.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
